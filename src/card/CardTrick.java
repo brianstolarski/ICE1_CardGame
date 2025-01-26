@@ -33,52 +33,52 @@ public class CardTrick {
         }
 
         // Step 3.1 - Display the 7 random cards
-        for (int i = 0; i < magicHand.length; i++) {
-            System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
-        }
+        // for (int i = 0; i < magicHand.length; i++) {
+        //     System.out.println(magicHand[i].getValue() + " of " + magicHand[i].getSuit());
+        // }
 
         // Step 4 - Ask the user for input
-        System.out.println("Pick a card.");
-        System.out.print("Enter a value from 1-13: ");
-        int input = scanner.nextInt();
+        // System.out.println("Pick a card.");
+        // System.out.print("Enter a value from 1-13: ");
+        // int input = scanner.nextInt();
 
         // Step 4.2 - Ask user for the suit
-        System.out.print("Pick a suit (0-3 where 0 = Hearts, 1=Diamonds, 2=Clubs, 3=Spades): ");
-        int suit = scanner.nextInt();
+        // System.out.print("Pick a suit (0-3 where 0 = Hearts, 1=Diamonds, 2=Clubs, 3=Spades): ");
+        // int suit = scanner.nextInt();
 
-        Card yourCard = new Card();
-        yourCard.setValue(input);
-        yourCard.setSuit(Card.SUITS[suit]);
+        // Card yourCard = new Card();
+        // yourCard.setValue(input);
+        // yourCard.setSuit(Card.SUITS[suit]);
 
         // Step 4.3 - Search for the card in the users hand
-        boolean found = false;
-        for (Card card : magicHand) {
-            if (card.getValue() == yourCard.getValue() &&
-                    card.getSuit().equals(yourCard.getSuit())) {
-                found = true;
-                break;
-            }
-        }
-
-        System.out.println(found ? "Your card is in the magic hand!" : "Sorry, your card is not in the magic hand.");
-
-        // Card luckyCard = new Card();
-        // luckyCard.setValue(7);
-        // luckyCard.setSuit("Hearts");
-
         // boolean found = false;
         // for (Card card : magicHand) {
-        //     if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+        //     if (card.getValue() == yourCard.getValue() &&
+        //             card.getSuit().equals(yourCard.getSuit())) {
         //         found = true;
         //         break;
         //     }
         // }
 
-        // if (found) {
-        //     System.out.println("WOW! You found the lucky card! The 7 of Hearts!");
-        // } else {
-        //     System.out.println("Sorry! None of the 7 cards you found were the lucky card! :(");
-        // }
+        // System.out.println(found ? "Your card is in the magic hand!" : "Sorry, your card is not in the magic hand.");
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
+
+        boolean found = false;
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            System.out.println("WOW! You found the lucky card! The 7 of Hearts!");
+        } else {
+            System.out.println("Sorry! None of the 7 cards you found were the lucky card! :(");
+        }
 
     }
 
