@@ -12,6 +12,9 @@ package card;
  * This code is to be used in ICE1. When you create your own branch,
  * add your name as a modifier.
  * @author srinivsi
+ * Modified by: Sabaa Al-Gburi
+ * Student ID: 991736646
+ * Date: January 25, 2025
  */
 public class Card {
 
@@ -19,12 +22,19 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+   
+   public Card(int value, String suit) {
+       this.value = value;
+       this.suit = suit;
+   }
     /**
      * @return the suit
      */
     public String getSuit() {
         return suit;
     }
+    
+    
 
     /**
      * @param suit the suit to set
