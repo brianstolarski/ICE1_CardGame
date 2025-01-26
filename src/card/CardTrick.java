@@ -35,17 +35,8 @@ public class CardTrick {
           magicHand[i] = c;
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-         System.out.print("Enter a card value (1-13): ");
-        int userValue = scanner.nextInt();
-        scanner.nextLine();
-        
-        System.out.print("Enter a suit (Hearts, Diamonds, Clubs, Spades): ");
-        String userSuit = scanner.nextLine();
-        
-         Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
+    
+        Card luckyCard = new Card(2, "Clubs"); 
         // and search magicHand here
         boolean found = false;
         for (Card c : magicHand) {
@@ -61,7 +52,7 @@ public class CardTrick {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
         // add one luckcard hard code 2,clubs
-        Card luckyCard = new Card(2, "Clubs"); 
+        
 
     }
     
