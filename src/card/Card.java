@@ -23,40 +23,33 @@ public class Card {
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
    
+   // Constructor with parameters
    public Card(int value, String suit) {
        this.value = value;
        this.suit = suit;
    }
-    /**
-     * @return the suit
-     */
-    public String getSuit() {
-        return suit;
-    }
-    
-    
 
-    /**
-     * @param suit the suit to set
-     */
-    public void setSuit(String suit) {
-        this.suit = suit;
-    }
+   // Default constructor
+   public Card() {
+       // Set default values (optional, you can leave it empty)
+       this.value = 1;  // Default value (Ace)
+       this.suit = "Hearts";  // Default suit
+   }
 
-    /**
-     * @return the value
-     */
-    public int getValue() {
-        return value;
-    }
+   // Getter and setter methods
+   public String getSuit() {
+       return suit;
+   }
 
-    /**
-     * @param value the value to set
-     */
-    public void setValue(int value) {
-        this.value = value;
-    }
-   
-   
-    
+   public void setSuit(String suit) {
+       this.suit = suit;
+   }
+
+   public int getValue() {
+       return value;
+   }
+
+   public void setValue(int value) {
+       this.value = value;
+   }
 }

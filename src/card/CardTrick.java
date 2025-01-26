@@ -29,7 +29,7 @@ public class CardTrick {
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
             c.setValue(rand.nextInt(13) + 1);  // Random value between 1 and 13
-            c.setSuit(Card.SUITS[rand.nextInt(4)]]);  // Random suit
+            c.setSuit(Card.SUITS[rand.nextInt(4)]);  // Random suit
             magicHand[i] = c;
         }
         
