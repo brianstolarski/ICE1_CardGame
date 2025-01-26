@@ -57,6 +57,10 @@ public class CardTrick {
         }
 
         System.out.println(found ? "Found your card!" : "Card not found!");
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
         
     }
 
