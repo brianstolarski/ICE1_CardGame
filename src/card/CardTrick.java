@@ -61,7 +61,7 @@ public class CardTrick {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
         // add one luckcard hard code 2,clubs
-        Card luckyCard = new Card(2, "Clubs"); // Example
+        Card luckyCard = new Card(2, "Clubs"); 
 
     }
     
