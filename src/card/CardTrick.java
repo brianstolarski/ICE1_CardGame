@@ -25,35 +25,31 @@ public class CardTrick {
         Scanner scanner = new Scanner(System.in);
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
-        {
+        // Fill magicHand array with 7 random cards
+        for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            c.setValue(rand.nextInt(13) + 1);
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            c.setSuit(Card.SUITS[rand.nextInt(4)]); 
-          magicHand[i] = c;
+            c.setValue(rand.nextInt(13) + 1);  // Random value between 1 and 13
+            c.setSuit(Card.SUITS[rand.nextInt(4)]]);  // Random suit
+            magicHand[i] = c;
         }
         
-    
+        // Hard-code the lucky card (2 of Clubs)
         Card luckyCard = new Card(2, "Clubs"); 
-        // and search magicHand here
+
+        // Search for the luckyCard in the magicHand array
         boolean found = false;
         for (Card c : magicHand) {
-            if (c.getValue() == userCard.getValue() && c.getSuit().equalsIgnoreCase(userCard.getSuit())) {
+            if (c.getValue() == luckyCard.getValue() && c.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
                 found = true;
                 break;
             }
         }
-        //Then report the result here
-        if (found) {
-            System.out.println("Congratulation, Your card is in the magic hand.");
-        } else {
-            System.out.println("Sorry, your card is not in the magic hand.");
-        }
-        // add one luckcard hard code 2,clubs
-        
 
+        // Report if the luckyCard was found
+        if (found) {
+            System.out.println("The lucky card (2 of Clubs) is in the magic hand!");
+        } else {
+            System.out.println("The lucky card (2 of Clubs) is not in the magic hand.");
+        }
     }
-    
 }
